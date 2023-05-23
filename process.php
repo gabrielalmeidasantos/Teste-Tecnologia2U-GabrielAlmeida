@@ -11,7 +11,7 @@ if ($_POST) {
     $bairro = $_POST['bairro'];
     $estado = $_POST['estado'];
 
-    if (isset($nome) && isset($nome) && isset($logradouro) && isset($cidade) && isset($bairro) && isset($estado)) {
+    if (isset($nome) && isset($cep) && isset($logradouro) && isset($cidade) && isset($bairro) && isset($estado)) {
         $usuarioDAO = new usuarioDAO($conn);
         $usuario = new Usuario($nome, $cep, $logradouro, $cidade, $bairro, $estado);
         $retorno = $usuarioDAO->registrar($usuario);
